@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+:root{
+  --color-primary: #FFCF25;
+  --color-dark: #1C1A1A;
+  --color-darkest: #000000;
+  --color-gray: #D3D3D3;
+}
+
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  background: var(--color-darkest);
+  height: 42px;
+  padding: 9px;
+}
+
+.logo-icon{
+  width: 35px;
+  height: 24px;
+}
+
+.menu-icon{
+  width: 27px;
+  height: 22px;
+}
+
+h1{
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+h2{
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-gray);
+}
+
+p{
+  color: var(--color-gray);
+  font-size: 9px;
+  margin: 0px;
+}
+
+button{
+  font-size: 14px;
+  font-weight: 600;
+  width: fit-content;
+}
+section{
+  text-align: center;
+  width: 100%;
+  background: var(--color-dark);
+  padding: 0px 9px;
+  min-height: 667px;
+}
+
+
+
+.cta{
+  background: var(--color-dark);
+  border-radius: 7px;
+  padding: 5px 10px;
+  border:1px solid var(--color-gray);
+  color: var(--color-gray);
+  font-weight: 600;
+}
+
+.vl{
+  border-right:var(--color-gray) 2px solid;
+  height: 70%;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-row{
+  flex-direction: row;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.hero-rating{
+  gap:10px;
+}
+
+.numbers{
+  font-size:18px;
+  font-weight: 700;
+  color:var(--color-primary);
+  display: contents;
+}
+.subnumbers{
+  font-size: 9px;
+}
+
+.hero{
+  display: flex;
+  min-height: 291px;
+  text-align: unset;
+}
+
+.why{
+  padding: 10px;
+  gap: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-img{
+  border:2px solid var(--color-primary);
+  height: 180px;
+}
+
+.hero-content{
+    width: 187px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    justify-content: center;
+}
+
+.hero-img{
+  width: 194px;
+  height: 292px;
+  background: url(assets/hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.primary{
+  color: var(--color-primary);
+}
+
+.dark{
+  color: var(--color-dark);
+}
+
+.gray{
+  color: var(--color-gray);
+}
+
