@@ -5,6 +5,11 @@
   margin: 0px;
   padding: 0px;
 }
+
+body{
+  scroll-behavior: smooth;
+}
+
 :root{
   --color-primary: #FFCF25;
   --color-dark: #1C1A1A;
@@ -32,7 +37,7 @@ nav{
 }
 
 h1{
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
   color: var(--color-primary);
 }
@@ -45,7 +50,7 @@ h2{
 
 p{
   color: var(--color-gray);
-  font-size: 9px;
+  font-size: 14px;
   margin: 0px;
 }
 
@@ -54,12 +59,16 @@ button{
   font-weight: 600;
   width: fit-content;
 }
+
 section{
   text-align: center;
   width: 100%;
   background: var(--color-dark);
   padding: 0px 9px;
   min-height: 667px;
+      scroll-snap-type: y mandatory;
+  scroll-snap-type: mandatory;
+    scroll-snap-align: start;
 }
 
 
@@ -106,7 +115,7 @@ section{
 
 .hero{
   display: flex;
-  min-height: 291px;
+  /* min-height: 291px; */
   text-align: unset;
 }
 
@@ -115,6 +124,11 @@ section{
   gap: 18px;
   display: flex;
   flex-direction: column;
+}
+
+.services{
+
+
 }
 
 .carousel-img{
@@ -131,12 +145,14 @@ section{
 }
 
 .hero-img{
-  width: 194px;
-  height: 292px;
+  min-width: 260px;
+  height: 591px;
   background: url(assets/hero.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  position: absolute;
+  right: 9px;
 }
 
 .primary{
