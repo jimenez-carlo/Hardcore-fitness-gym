@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+  --color-primary: #FFCF25;
+  --color-dark: #1C1A1A;
+  --color-darkest: #000000;
+  --color-gray: #D3D3D3;
+}
+
 *{
 
   box-sizing: border-box;
@@ -6,15 +14,12 @@
   padding: 0px;
 }
 
+html{
+  scroll-snap-type: y mandatory;
+}
 body{
   scroll-behavior: smooth;
-}
-
-:root{
-  --color-primary: #FFCF25;
-  --color-dark: #1C1A1A;
-  --color-darkest: #000000;
-  --color-gray: #D3D3D3;
+  width: 375px;
 }
 
 
@@ -24,16 +29,13 @@ nav{
   background: var(--color-darkest);
   height: 42px;
   padding: 9px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
-.logo-icon{
-  width: 35px;
-  height: 24px;
-}
-
-.menu-icon{
-  width: 27px;
-  height: 22px;
+h1, h2, h3, h4, h5, h6{
+  margin:0px;
 }
 
 h1{
@@ -46,6 +48,11 @@ h2{
   font-weight: 700;
   font-size: 20px;
   color: var(--color-gray);
+}
+
+h3{
+font-size: 15px;
+
 }
 
 p{
@@ -64,21 +71,31 @@ section{
   text-align: center;
   width: 100%;
   background: var(--color-dark);
-  padding: 0px 9px;
-  min-height: 667px;
-      scroll-snap-type: y mandatory;
-  scroll-snap-type: mandatory;
-    scroll-snap-align: start;
+    padding: 60px 9px 0px 9px;
+  min-height: 619px;
+  scroll-snap-align: start;
+  gap: 10px;
 }
 
 
+.logo-text{
+  display: none!important;
+}
+.logo-icon{
+  width: 35px;
+  height: 24px;
+}
+
+.menu-icon{
+  width: 27px;
+  height: 22px;
+}
 
 .cta{
-  background: var(--color-dark);
+  background: var(--color-primary);
   border-radius: 7px;
   padding: 5px 10px;
-  border:1px solid var(--color-gray);
-  color: var(--color-gray);
+  color: var(--color-dark);
   font-weight: 600;
 }
 
@@ -115,20 +132,22 @@ section{
 
 .hero{
   display: flex;
-  /* min-height: 291px; */
   text-align: unset;
+  padding: 42px 9px 0px 9px;
+  position: relative;
 }
 
 .why{
-  padding: 10px;
   gap: 18px;
   display: flex;
   flex-direction: column;
 }
 
-.services{
-
-
+.price-rate{
+  padding: 36px 9px 0px 9px;
+}
+.price-card{
+  min-height: 40vh;
 }
 
 .carousel-img{
@@ -162,8 +181,157 @@ section{
 .dark{
   color: var(--color-dark);
 }
+.bg-primary{
+  background: var(--color-primary)!important;
+}
+.bg-dark{
+  background: var(--color-dark)!important;
+}
+.bg-gray{
+  background: var(--color-gray)!important;
+}
 
 .gray{
   color: var(--color-gray);
 }
 
+
+.w-100 {
+    width: unset;
+    height: 70vh;
+    object-fit: contain;
+}
+
+.bordered{
+  border: 2px solid var(--color-primary);
+}
+
+.f-16{
+  font-size: 16px;
+}
+
+.operating-hours{
+  min-height: 190px;
+}
+
+.sm{
+  font-size: 12px;
+}
+
+.map{
+  width: 305px;
+  height: auto;
+}
+
+.footer-links{
+  padding:3px 8px;
+  text-decoration: none;
+}
+.ml17{
+  margin-left: 17%;
+}
+
+
+@media only screen and (min-width: 768px) {
+  body{
+    width: 768px;
+  }
+  nav{
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  .logo-text{
+    display: inline-block!important;
+  }
+  .menu-icon{
+    display: none!important;
+  }
+  section{
+    height: 100vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  .hero{
+  padding-top:unset;
+  }
+  .hero-content{
+    width: 100%;
+    gap: 2em;
+    justify-content: center;
+    padding: 0px 10vw;
+  }
+  .hero-img{
+    width: 47vw;
+    right: 10vw;
+    height: 100vh;
+  }
+  .c{
+    min-height: 21vh;
+  }
+  .price-rate{
+    padding-top: 60px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    height: 77vh;
+  }
+  .operating-hours{
+    min-height: 100px;
+        height: 17vh;
+        padding: unset;
+  }
+  .pricee-card{
+    min-height: 35vh;
+  }
+  .price-interval{
+    font-size: 21px;
+  }
+  h3{
+    font-size: 27px;
+  }
+  center{
+    margin-bottom: 1em;
+  }
+  .map{
+    width: 72vw;
+  }
+  .ml17{
+    margin: unset;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body{
+    width: 100%;
+  }
+    .hero-img{
+      background-image: url(assets/hero3.png);
+      background-size: cover;
+        background-repeat: no-repeat;
+        width: 50%;
+    }
+    h1{
+      font-size: 54px;
+    }
+    p{
+      font-size: 18px;
+    }
+    .numbers{
+      font-size: 32px;
+    }
+    .subnumbers{
+      font-size: 13px;
+    }
+    .hero-rating{
+      gap: 21px;
+    }
+      .c{
+    min-height: 25vh;
+  }
+
+    .map{
+    width: 60vw;
+  }
+  .sm{
+    font-size: 15px;
+  }
+}
