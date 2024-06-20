@@ -24,341 +24,635 @@
     <meta property="og:locale" content="en_PH">
 
     <meta name="msvalidate.01" content="3847677CED4C1A0F5E44F53FFBB390E1" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="style2.css">
   </head>
 
   <body>
+    <div class="bg-white">
 
-    <nav>
-      <div>
-        <img src="assets/logo.png" alt="hardcore fitness gym logo" class="logo-icon">
-        <h2 class="gray d-inline fw-bold text-end align-top logo-text">
-          HARDCORE <span class="primary">FITNESS</span>
-        </h2>
-
-      </div>
-      <img src="assets/menu.png" alt="menu" class="menu-icon">
-    </nav>
-
-    <!-- Hero section -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>HARDCORE
-          <br>
-          FITNESS GYM
-        </h1>
-        <p>Bring a friend and get a free walk-in today!</p>
-        <button class="btn cta">Get Started!</button>
-
-        <div class="flex flex-row hero-rating">
-          <div class="flex flex-column">
-            <p class="numbers">50+</p>
-            <p class="subnumbers">members</p>
+      <header class="bg-black  sticky top-0 z-50">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5 text-gray-400 inline-flex text-base text-lg font-bold gap-x-1">
+              <span class="sr-only">Hardcore Fitness Gym</span>
+              <img class="h-8 w-auto" src="assets/logo.png" alt="">
+              HARDCORE <span class="text-yellow-400">FITNESS</span>
+            </a>
           </div>
-          <div class="vl"></div>
-          <div class="flex flex-column">
-            <p class="numbers">20+</p>
-            <p class="subnumbers">coaches</p>
+          <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
           </div>
-          <div class="vl"></div>
-          <div class="flex flex-column">
-            <p class="numbers">3+</p>
-            <p class="subnumbers">partners</p>
-          </div>
-        </div>
-      </div>
-      <div class="hero-img">
-      </div>
-    </section>
-    <!-- End Hero Section -->
-
-    <!-- Why Choose Us Section -->
-    <section class="why">
-      <h2>WHY <span class="primary">CHOOSE US</span></h2>
-      <p>Our equipment is regularly serviced and updated to ensure it remains in peak condition, providing you with
-        a safe and reliable workout environment</p>
-
-      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="assets/img1.jpg" class="w-100" alt="Slide 1">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img2.jpg" class="w-100" alt="Slide 2">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img3.jpg" class="w-100" alt="Slide 3">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img4.jpg" class="w-100" alt="Slide 4">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img5.jpg" class="w-100" alt="Slide 5">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
-    <!-- End Why Choose Us Section -->
-
-    <!-- Why Our Services Section -->
-    <section class="services">
-      <h2 class="mb-3">OUR <span class="primary">SERVICES</span></h2>
-      <p>Elevate Your Workout Experience with Our All-Inclusive Gym Services</p>
-      <div class="row">
-        <div class="col-sm-12 col-md-6 mt-3">
-          <div class="bordered c p-2">
-            <h3 class="primary p-1 text-center">GYM
-              <span>
-                <svg width="35" height="35" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6.5 5.5V19.5H9.5V13.5H15.5V19.5H18.5V5.5H15.5V11.5H9.5V5.5H6.5ZM3.5 15.5C3.5 15.7652 3.60536 16.0196 3.79289 16.2071C3.98043 16.3946 4.23478 16.5 4.5 16.5H5.5V8.5H4.5C4.23478 8.5 3.98043 8.60536 3.79289 8.79289C3.60536 8.98043 3.5 9.23478 3.5 9.5V11.5H2.5V13.5H3.5V15.5ZM21.5 9.5C21.5 9.23478 21.3946 8.98043 21.2071 8.79289C21.0196 8.60536 20.7652 8.5 20.5 8.5H19.5V16.5H20.5C20.7652 16.5 21.0196 16.3946 21.2071 16.2071C21.3946 16.0196 21.5 15.7652 21.5 15.5V13.5H22.5V11.5H21.5V9.5Z"
-                    fill="#FFCF25" />
+          <div class="hidden lg:flex lg:gap-x-12">
+            <div class="relative" x-data="{ open: false }">
+              <button type="button" class="flex items-center gap-x-1 text-sm font-semibold leading-6 text-yellow-400"
+                aria-expanded="false" @click="open = ! open">
+                Product
+                <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd" />
                 </svg>
+              </button>
+              <div
+                class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5"
+                x-show="open" @click.outside="open = false" x-transition:enter="transition ease-out duration-200"
+                x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1">
+                <div class="p-4">
+                  <div
+                    class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                    <div
+                      class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+                      </svg>
+                    </div>
+                    <div class="flex-auto">
+                      <a href="#" class="block font-semibold text-gray-900">
+                        Analytics
+                        <span class="absolute inset-0"></span>
+                      </a>
+                      <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p>
+                    </div>
+                  </div>
+                  <div
+                    class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                    <div
+                      class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
+                      </svg>
+                    </div>
+                    <div class="flex-auto">
+                      <a href="#" class="block font-semibold text-gray-900">
+                        Engagement
+                        <span class="absolute inset-0"></span>
+                      </a>
+                      <p class="mt-1 text-gray-600">Speak directly to your customers</p>
+                    </div>
+                  </div>
+                  <div
+                    class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                    <div
+                      class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
+                      </svg>
+                    </div>
+                    <div class="flex-auto">
+                      <a href="#" class="block font-semibold text-gray-900">
+                        Security
+                        <span class="absolute inset-0"></span>
+                      </a>
+                      <p class="mt-1 text-gray-600">Your customers’ data will be safe and secure</p>
+                    </div>
+                  </div>
+                  <div
+                    class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                    <div
+                      class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
+                      </svg>
+                    </div>
+                    <div class="flex-auto">
+                      <a href="#" class="block font-semibold text-gray-900">
+                        Integrations
+                        <span class="absolute inset-0"></span>
+                      </a>
+                      <p class="mt-1 text-gray-600">Connect with third-party tools</p>
+                    </div>
+                  </div>
+                  <div
+                    class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+                    <div
+                      class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                      </svg>
+                    </div>
+                    <div class="flex-auto">
+                      <a href="#" class="block font-semibold text-gray-900">
+                        Automations
+                        <span class="absolute inset-0"></span>
+                      </a>
+                      <p class="mt-1 text-gray-600">Build strategic funnels that will convert</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                  <a href="#"
+                    class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
+                    <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                      aria-hidden="true">
+                      <path fill-rule="evenodd"
+                        d="M2 10a8 8 0 1116 0 8 8 0 01-16 0zm6.39-2.908a.75.75 0 01.766.027l3.5 2.25a.75.75 0 010 1.262l-3.5 2.25A.75.75 0 018 12.25v-4.5a.75.75 0 01.39-.658z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Watch demo
+                  </a>
+                  <a href="#"
+                    class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
+                    <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor"
+                      aria-hidden="true">
+                      <path fill-rule="evenodd"
+                        d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    Contact sales
+                  </a>
+                </div>
+              </div>
+            </div>
 
-              </span>
-            </h3>
-            <p class="text-start">Our gym offers state-of-the-art equipment and facilities for all fitness levels.Our
-              clean, spacious
-              environment ensures
-              a comfortable and motivating workout experience.</p>
+            <a href="#" class="text-sm font-semibold leading-6 text-yellow-400">Features</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-yellow-400">Marketplace</a>
+            <a href="#" class="text-sm font-semibold leading-6 text-yellow-400">Company</a>
+          </div>
+
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="lg:hidden" role="dialog" aria-modal="true">
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-10"></div>
+          <div
+            class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+              </a>
+              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Close menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <div class="-mx-3">
+                    <button type="button"
+                      class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      aria-controls="disclosure-1" aria-expanded="false">
+                      Product
+                      <!--
+                  Expand/collapse icon, toggle classes based on menu open state.
+
+                  Open: "rotate-180", Closed: ""
+                -->
+                      <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                    <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                    <div class="mt-2 space-y-2" id="disclosure-1">
+                      <a href="#"
+                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Analytics</a>
+                      <a href="#"
+                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Engagement</a>
+                      <a href="#"
+                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Security</a>
+                      <a href="#"
+                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Integrations</a>
+                      <a href="#"
+                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Automations</a>
+                      <a href="#"
+                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Watch
+                        demo</a>
+                      <a href="#"
+                        class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact
+                        sales</a>
+                    </div>
+                  </div>
+                  <a href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
+                  <a href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
+                  <a href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
+                </div>
+                <div class="py-6">
+                  <a href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log
+                    in</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 mt-3">
-          <div class="bordered c p-2">
-            <h3 class="primary p-1 text-center">CYCLING
-              <span><svg width="30" height="30" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_10_292)">
+      </header>
+
+      <div class="relative isolate px-6 pt-14 lg:px-8 ">
+        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          aria-hidden="true">
+          <div
+            class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+          </div>
+        </div>
+        <div class="container mx-auto bg-black">
+          <!-- ... -->
+          <div class="text-start">
+            <h1 class="text-4xl font-bold tracking-tight text-yellow-400 sm:text-6xl">HARDCORE<br>
+              FITNESS GYM </h1>
+            <p class=" mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui
+              irure
+              qui
+              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+            <a href="#"
+              class="rounded-md bg-yellow-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600">Get
+              started</a>
+          </div>
+
+          <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+            <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+              <div
+                class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600"><span
+                    class="absolute inset-0" aria-hidden="true"></span>Read more <span
+                    aria-hidden="true">&rarr;</span></a>
+              </div>
+
+            </div>
+            <div class="text-start">
+              <h1 class="text-4xl font-bold tracking-tight text-yellow-400 sm:text-6xl">HARDCORE<br>
+                FITNESS GYM </h1>
+              <p class=" mt-6 text-lg leading-8 text-gray-600">Anim aute id magna aliqua ad ad non deserunt sunt. Qui
+                irure
+                qui
+                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+              <div class="mt-10 flex items-center justify-center gap-x-6">
+                <a href="#"
+                  class="rounded-md bg-yellow-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600">Get
+                  started</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span
+                    aria-hidden="true">→</span></a>
+              </div>
+            </div>
+
+
+          </div>
+          <div
+            class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+            aria-hidden="true">
+            <div
+              class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+              style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="stickys-top">
+        <div>
+          <img src="assets/logo.png" alt="hardcore fitness gym logo" class="logo-icon">
+          <h2 class="gray d-inline fw-bold text-end align-top logo-text">
+            HARDCORE <span class="primary">FITNESS</span>
+          </h2>
+
+        </div>
+        <img src="assets/menu.png" alt="menu" class="menu-icon">
+      </nav>
+
+      <!-- Hero section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>HARDCORE
+            <br>
+            FITNESS GYM
+          </h1>
+          <p>Bring a friend and get a free walk-in today!</p>
+          <button class="btn cta">Get Started!</button>
+
+          <div class="flex flex-row hero-rating">
+            <div class="flex flex-column">
+              <p class="numbers">50+</p>
+              <p class="subnumbers">members</p>
+            </div>
+            <div class="vl"></div>
+            <div class="flex flex-column">
+              <p class="numbers">20+</p>
+              <p class="subnumbers">coaches</p>
+            </div>
+            <div class="vl"></div>
+            <div class="flex flex-column">
+              <p class="numbers">3+</p>
+              <p class="subnumbers">partners</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-img">
+        </div>
+      </section>
+      <!-- End Hero Section -->
+
+      <!-- Why Choose Us Section -->
+      <section class="why">
+        <h2>WHY <span class="primary">CHOOSE US</span></h2>
+        <p>Our equipment is regularly serviced and updated to ensure it remains in peak condition, providing you with
+          a safe and reliable workout environment</p>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/img1.jpg" class="w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img2.jpg" class="w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img3.jpg" class="w-100" alt="Slide 3">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img4.jpg" class="w-100" alt="Slide 4">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img5.jpg" class="w-100" alt="Slide 5">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <!-- End Why Choose Us Section -->
+
+      <!-- Why Our Services Section -->
+      <section class="services">
+        <h2 class="mb-3">OUR <span class="primary">SERVICES</span></h2>
+        <p>Elevate Your Workout Experience with Our All-Inclusive Gym Services</p>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 mt-3">
+            <div class="bordered c p-2">
+              <h3 class="primary p-1 text-center">GYM
+                <span>
+                  <svg width="35" height="35" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M5 21C4.07174 21 3.1815 20.6312 2.52513 19.9748C1.86875 19.3184 1.5 18.4282 1.5 17.5C1.5 16.5717 1.86875 15.6815 2.52513 15.0251C3.1815 14.3687 4.07174 14 5 14C5.92826 14 6.8185 14.3687 7.47487 15.0251C8.13125 15.6815 8.5 16.5717 8.5 17.5C8.5 18.4282 8.13125 19.3184 7.47487 19.9748C6.8185 20.6312 5.92826 21 5 21ZM5 12.5C3.67392 12.5 2.40215 13.0267 1.46447 13.9644C0.526784 14.9021 0 16.1739 0 17.5C0 18.826 0.526784 20.0978 1.46447 21.0355C2.40215 21.9732 3.67392 22.5 5 22.5C6.32608 22.5 7.59785 21.9732 8.53553 21.0355C9.47322 20.0978 10 18.826 10 17.5C10 16.1739 9.47322 14.9021 8.53553 13.9644C7.59785 13.0267 6.32608 12.5 5 12.5ZM14.8 10.5H19V8.69995H15.8L13.86 5.42995C13.57 4.92995 13 4.59995 12.4 4.59995C11.93 4.59995 11.5 4.78995 11.2 5.09995L7.5 8.78995C7.19 9.09995 7 9.49995 7 9.99995C7 10.63 7.33 11.16 7.85 11.47L11.2 13.5V18.5H13V12L10.75 10.35L13.07 7.99995M19 21C18.0717 21 17.1815 20.6312 16.5251 19.9748C15.8687 19.3184 15.5 18.4282 15.5 17.5C15.5 16.5717 15.8687 15.6815 16.5251 15.0251C17.1815 14.3687 18.0717 14 19 14C19.9283 14 20.8185 14.3687 21.4749 15.0251C22.1313 15.6815 22.5 16.5717 22.5 17.5C22.5 18.4282 22.1313 19.3184 21.4749 19.9748C20.8185 20.6312 19.9283 21 19 21ZM19 12.5C17.6739 12.5 16.4021 13.0267 15.4645 13.9644C14.5268 14.9021 14 16.1739 14 17.5C14 18.826 14.5268 20.0978 15.4645 21.0355C16.4021 21.9732 17.6739 22.5 19 22.5C19.6566 22.5 20.3068 22.3706 20.9134 22.1193C21.52 21.8681 22.0712 21.4998 22.5355 21.0355C22.9998 20.5712 23.3681 20.02 23.6194 19.4134C23.8707 18.8067 24 18.1566 24 17.5C24 16.8433 23.8707 16.1932 23.6194 15.5865C23.3681 14.9799 22.9998 14.4287 22.5355 13.9644C22.0712 13.5001 21.52 13.1318 20.9134 12.8806C20.3068 12.6293 19.6566 12.5 19 12.5ZM16 5.29995C17 5.29995 17.8 4.49995 17.8 3.49995C17.8 2.49995 17 1.69995 16 1.69995C15 1.69995 14.2 2.49995 14.2 3.49995C14.2 4.49995 15 5.29995 16 5.29995Z"
+                      d="M6.5 5.5V19.5H9.5V13.5H15.5V19.5H18.5V5.5H15.5V11.5H9.5V5.5H6.5ZM3.5 15.5C3.5 15.7652 3.60536 16.0196 3.79289 16.2071C3.98043 16.3946 4.23478 16.5 4.5 16.5H5.5V8.5H4.5C4.23478 8.5 3.98043 8.60536 3.79289 8.79289C3.60536 8.98043 3.5 9.23478 3.5 9.5V11.5H2.5V13.5H3.5V15.5ZM21.5 9.5C21.5 9.23478 21.3946 8.98043 21.2071 8.79289C21.0196 8.60536 20.7652 8.5 20.5 8.5H19.5V16.5H20.5C20.7652 16.5 21.0196 16.3946 21.2071 16.2071C21.3946 16.0196 21.5 15.7652 21.5 15.5V13.5H22.5V11.5H21.5V9.5Z"
                       fill="#FFCF25" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_10_292">
-                      <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </span>
-            </h3>
-            <p class="text-start">Experience high-energy indoor cycling with immersive virtual programs simulating
-              real-world routes. Enjoy
-              a supportive
-              community in our cutting-edge studio.</p>
+                  </svg>
+
+                </span>
+              </h3>
+              <p class="text-start">Our gym offers state-of-the-art equipment and facilities for all fitness levels.Our
+                clean, spacious
+                environment ensures
+                a comfortable and motivating workout experience.</p>
+            </div>
           </div>
-        </div>
-        <div class="col-sm-12 col-md-6 mt-3">
-          <div class="bordered c p-2">
-            <h3 class="primary p-1 text-center">BOXING
-              <span><svg width="25" height="25" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_10_305)">
+          <div class="col-sm-12 col-md-6 mt-3">
+            <div class="bordered c p-2">
+              <h3 class="primary p-1 text-center">CYCLING
+                <span><svg width="30" height="30" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_10_292)">
+                      <path
+                        d="M5 21C4.07174 21 3.1815 20.6312 2.52513 19.9748C1.86875 19.3184 1.5 18.4282 1.5 17.5C1.5 16.5717 1.86875 15.6815 2.52513 15.0251C3.1815 14.3687 4.07174 14 5 14C5.92826 14 6.8185 14.3687 7.47487 15.0251C8.13125 15.6815 8.5 16.5717 8.5 17.5C8.5 18.4282 8.13125 19.3184 7.47487 19.9748C6.8185 20.6312 5.92826 21 5 21ZM5 12.5C3.67392 12.5 2.40215 13.0267 1.46447 13.9644C0.526784 14.9021 0 16.1739 0 17.5C0 18.826 0.526784 20.0978 1.46447 21.0355C2.40215 21.9732 3.67392 22.5 5 22.5C6.32608 22.5 7.59785 21.9732 8.53553 21.0355C9.47322 20.0978 10 18.826 10 17.5C10 16.1739 9.47322 14.9021 8.53553 13.9644C7.59785 13.0267 6.32608 12.5 5 12.5ZM14.8 10.5H19V8.69995H15.8L13.86 5.42995C13.57 4.92995 13 4.59995 12.4 4.59995C11.93 4.59995 11.5 4.78995 11.2 5.09995L7.5 8.78995C7.19 9.09995 7 9.49995 7 9.99995C7 10.63 7.33 11.16 7.85 11.47L11.2 13.5V18.5H13V12L10.75 10.35L13.07 7.99995M19 21C18.0717 21 17.1815 20.6312 16.5251 19.9748C15.8687 19.3184 15.5 18.4282 15.5 17.5C15.5 16.5717 15.8687 15.6815 16.5251 15.0251C17.1815 14.3687 18.0717 14 19 14C19.9283 14 20.8185 14.3687 21.4749 15.0251C22.1313 15.6815 22.5 16.5717 22.5 17.5C22.5 18.4282 22.1313 19.3184 21.4749 19.9748C20.8185 20.6312 19.9283 21 19 21ZM19 12.5C17.6739 12.5 16.4021 13.0267 15.4645 13.9644C14.5268 14.9021 14 16.1739 14 17.5C14 18.826 14.5268 20.0978 15.4645 21.0355C16.4021 21.9732 17.6739 22.5 19 22.5C19.6566 22.5 20.3068 22.3706 20.9134 22.1193C21.52 21.8681 22.0712 21.4998 22.5355 21.0355C22.9998 20.5712 23.3681 20.02 23.6194 19.4134C23.8707 18.8067 24 18.1566 24 17.5C24 16.8433 23.8707 16.1932 23.6194 15.5865C23.3681 14.9799 22.9998 14.4287 22.5355 13.9644C22.0712 13.5001 21.52 13.1318 20.9134 12.8806C20.3068 12.6293 19.6566 12.5 19 12.5ZM16 5.29995C17 5.29995 17.8 4.49995 17.8 3.49995C17.8 2.49995 17 1.69995 16 1.69995C15 1.69995 14.2 2.49995 14.2 3.49995C14.2 4.49995 15 5.29995 16 5.29995Z"
+                        fill="#FFCF25" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_10_292">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </h3>
+              <p class="text-start">Experience high-energy indoor cycling with immersive virtual programs simulating
+                real-world routes. Enjoy
+                a supportive
+                community in our cutting-edge studio.</p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 mt-3">
+            <div class="bordered c p-2">
+              <h3 class="primary p-1 text-center">BOXING
+                <span><svg width="25" height="25" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_10_305)">
+                      <path
+                        d="M9.84264 9.66663L9.9942 9.67246C10.3589 9.7001 10.7 9.82729 10.9593 10.0322C11.2185 10.2372 11.3796 10.5071 11.4151 10.7958L11.4204 10.9166L11.413 11.0375C11.3776 11.326 11.2166 11.5958 10.9576 11.8008C10.6986 12.0057 10.3576 12.133 9.99315 12.1608L9.84264 12.1666H6.15881V13.8333H9.84264C11.6319 13.8333 13.1233 12.8233 13.457 11.4841L13.4886 11.3341L19.8416 11.3333C20.5899 11.3333 21.3025 11.2091 21.9466 10.9866V14.6666C21.9468 15.1837 21.7444 15.6881 21.3674 16.1103C20.9904 16.5325 20.4573 16.8518 19.8416 17.0241V18C19.8416 18.221 19.7307 18.4329 19.5333 18.5892C19.3359 18.7455 19.0682 18.8333 18.7891 18.8333H6.15881C5.87967 18.8333 5.61195 18.7455 5.41457 18.5892C5.21718 18.4329 5.10629 18.221 5.10629 18V17.025C4.4904 16.8526 3.95721 16.5332 3.5802 16.1108C3.20318 15.6884 3.00091 15.1838 3.00125 14.6666V11.3333C3.00125 10.8913 3.22303 10.4673 3.6178 10.1548C4.01257 9.84222 4.548 9.66663 5.10629 9.66663H9.84264ZM22.9991 6.74996V7.16663L22.9939 7.31329C22.9485 7.92462 22.6214 8.50151 22.0745 8.93452C21.5276 9.36754 20.7989 9.62656 20.0268 9.66246L19.8416 9.66663H13.1718C12.889 9.19456 12.4513 8.7913 11.9043 8.499C11.3574 8.20669 10.7213 8.03606 10.0626 8.00496L9.84158 7.99996H5.10524C4.36585 7.99984 3.63946 8.15389 2.99915 8.44663L3.00125 5.49996C3.00125 4.6159 3.44481 3.76806 4.23436 3.14294C5.0239 2.51782 6.09475 2.16663 7.21133 2.16663H17.2103C18.7456 2.16663 20.218 2.64951 21.3036 3.50905C22.3892 4.36859 22.9991 5.53438 22.9991 6.74996Z"
+                        fill="#FFCF25" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_10_305">
+                        <rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </h3>
+              <p class="text-start">Experience high-energy indoor cycling with immersive virtual programs simulating
+                real-world routes. Enjoy
+                a supportive
+                community in our cutting-edge studio.</p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 mt-3 mb-4">
+            <div class="bordered c p-2">
+              <h3 class="primary p-1 text-center">WEIGHTLIFTING
+                <span><svg width="35" height="35" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M9.84264 9.66663L9.9942 9.67246C10.3589 9.7001 10.7 9.82729 10.9593 10.0322C11.2185 10.2372 11.3796 10.5071 11.4151 10.7958L11.4204 10.9166L11.413 11.0375C11.3776 11.326 11.2166 11.5958 10.9576 11.8008C10.6986 12.0057 10.3576 12.133 9.99315 12.1608L9.84264 12.1666H6.15881V13.8333H9.84264C11.6319 13.8333 13.1233 12.8233 13.457 11.4841L13.4886 11.3341L19.8416 11.3333C20.5899 11.3333 21.3025 11.2091 21.9466 10.9866V14.6666C21.9468 15.1837 21.7444 15.6881 21.3674 16.1103C20.9904 16.5325 20.4573 16.8518 19.8416 17.0241V18C19.8416 18.221 19.7307 18.4329 19.5333 18.5892C19.3359 18.7455 19.0682 18.8333 18.7891 18.8333H6.15881C5.87967 18.8333 5.61195 18.7455 5.41457 18.5892C5.21718 18.4329 5.10629 18.221 5.10629 18V17.025C4.4904 16.8526 3.95721 16.5332 3.5802 16.1108C3.20318 15.6884 3.00091 15.1838 3.00125 14.6666V11.3333C3.00125 10.8913 3.22303 10.4673 3.6178 10.1548C4.01257 9.84222 4.548 9.66663 5.10629 9.66663H9.84264ZM22.9991 6.74996V7.16663L22.9939 7.31329C22.9485 7.92462 22.6214 8.50151 22.0745 8.93452C21.5276 9.36754 20.7989 9.62656 20.0268 9.66246L19.8416 9.66663H13.1718C12.889 9.19456 12.4513 8.7913 11.9043 8.499C11.3574 8.20669 10.7213 8.03606 10.0626 8.00496L9.84158 7.99996H5.10524C4.36585 7.99984 3.63946 8.15389 2.99915 8.44663L3.00125 5.49996C3.00125 4.6159 3.44481 3.76806 4.23436 3.14294C5.0239 2.51782 6.09475 2.16663 7.21133 2.16663H17.2103C18.7456 2.16663 20.218 2.64951 21.3036 3.50905C22.3892 4.36859 22.9991 5.53438 22.9991 6.74996Z"
+                      d="M6.5 5.5V19.5H9.5V13.5H15.5V19.5H18.5V5.5H15.5V11.5H9.5V5.5H6.5ZM3.5 15.5C3.5 15.7652 3.60536 16.0196 3.79289 16.2071C3.98043 16.3946 4.23478 16.5 4.5 16.5H5.5V8.5H4.5C4.23478 8.5 3.98043 8.60536 3.79289 8.79289C3.60536 8.98043 3.5 9.23478 3.5 9.5V11.5H2.5V13.5H3.5V15.5ZM21.5 9.5C21.5 9.23478 21.3946 8.98043 21.2071 8.79289C21.0196 8.60536 20.7652 8.5 20.5 8.5H19.5V16.5H20.5C20.7652 16.5 21.0196 16.3946 21.2071 16.2071C21.3946 16.0196 21.5 15.7652 21.5 15.5V13.5H22.5V11.5H21.5V9.5Z"
                       fill="#FFCF25" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_10_305">
-                      <rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </span>
-            </h3>
-            <p class="text-start">Experience high-energy indoor cycling with immersive virtual programs simulating
-              real-world routes. Enjoy
-              a supportive
-              community in our cutting-edge studio.</p>
+                  </svg></span>
+              </h3>
+              <p class="text-start">Our weightlifting area features free weights, barbells, and machines for all your
+                strength-building
+                needs. Benefit from
+                Olympic weightlifting coaching and structured strength training programs</p>
+            </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 mt-3 mb-4">
-          <div class="bordered c p-2">
-            <h3 class="primary p-1 text-center">WEIGHTLIFTING
-              <span><svg width="35" height="35" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6.5 5.5V19.5H9.5V13.5H15.5V19.5H18.5V5.5H15.5V11.5H9.5V5.5H6.5ZM3.5 15.5C3.5 15.7652 3.60536 16.0196 3.79289 16.2071C3.98043 16.3946 4.23478 16.5 4.5 16.5H5.5V8.5H4.5C4.23478 8.5 3.98043 8.60536 3.79289 8.79289C3.60536 8.98043 3.5 9.23478 3.5 9.5V11.5H2.5V13.5H3.5V15.5ZM21.5 9.5C21.5 9.23478 21.3946 8.98043 21.2071 8.79289C21.0196 8.60536 20.7652 8.5 20.5 8.5H19.5V16.5H20.5C20.7652 16.5 21.0196 16.3946 21.2071 16.2071C21.3946 16.0196 21.5 15.7652 21.5 15.5V13.5H22.5V11.5H21.5V9.5Z"
-                    fill="#FFCF25" />
-                </svg></span>
-            </h3>
-            <p class="text-start">Our weightlifting area features free weights, barbells, and machines for all your
-              strength-building
-              needs. Benefit from
-              Olympic weightlifting coaching and structured strength training programs</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Our Services Section -->
+      </section>
+      <!-- End Our Services Section -->
 
-    <!-- Price rate Section -->
-    <section class="price-rate">
-      <h2 class="mb-3"> OUR <span class="primary">PRICE RATE</span></h2>
-      <p>Affordable Rates for Premium Fitness:<br> Choose the Perfect Plan for You</p>
-      <div class="row">
-        <div class="col-6 mt-3 mb-4">
-          <div class="bordered py-2 price-card rounded">
-            <h3 class="primary p-3 text-center fw-bold">WALK-IN
-              <span><svg width="22" height="22" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_10_325)">
+      <!-- Price rate Section -->
+      <section class="price-rate">
+        <h2 class="mb-3"> OUR <span class="primary">PRICE RATE</span></h2>
+        <p>Affordable Rates for Premium Fitness:<br> Choose the Perfect Plan for You</p>
+        <div class="row">
+          <div class="col-6 mt-3 mb-4">
+            <div class="bordered py-2 price-card rounded">
+              <h3 class="primary p-3 text-center fw-bold">WALK-IN
+                <span><svg width="22" height="22" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_10_325)">
+                      <path
+                        d="M7.62 11.6422H12.5V10.2385H8.88L6.88 7.64174C6.58 7.25184 6.04 6.9867 5.42 6.9867C5.24 6.9867 5.08 7.01009 4.92 7.04908L-0.5 8.36697V12.422H1.3V9.56009L3.41 9.04541L-0.5 21H1.3L4.17 14.6757L6.5 17.1009V21H8.3V16.0014L5.81 12.461L6.54 10.2229M7.5 6.80734C8.5 6.80734 9.3 6.18349 9.3 5.40367C9.3 4.62385 8.5 4 7.5 4C6.5 4 5.7 4.62385 5.7 5.40367C5.7 6.18349 6.5 6.80734 7.5 6.80734Z"
+                        fill="#FFCF25" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_10_325">
+                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+              </h3>
+              <h1 class="gray">₱ 60</h1>
+              <p class="fw-bold my-2 price-interval">/day</p>
+              <button class="cta">Get Started!</button>
+            </div>
+          </div>
+          <div class="col-6 mt-3 mb-4">
+            <div class="bordered py-2 price-card bg-primary rounded">
+              <h3 class="dark p-3 text-center fw-bold">MEMBERSHIP
+                <span><svg width="22" height="22" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                      d="M7.62 11.6422H12.5V10.2385H8.88L6.88 7.64174C6.58 7.25184 6.04 6.9867 5.42 6.9867C5.24 6.9867 5.08 7.01009 4.92 7.04908L-0.5 8.36697V12.422H1.3V9.56009L3.41 9.04541L-0.5 21H1.3L4.17 14.6757L6.5 17.1009V21H8.3V16.0014L5.81 12.461L6.54 10.2229M7.5 6.80734C8.5 6.80734 9.3 6.18349 9.3 5.40367C9.3 4.62385 8.5 4 7.5 4C6.5 4 5.7 4.62385 5.7 5.40367C5.7 6.18349 6.5 6.80734 7.5 6.80734Z"
+                      d="M4.16671 2.16663H18.8334C19.3375 2.16663 19.7693 2.32996 20.1286 2.65663C20.488 2.98329 20.6673 3.37551 20.6667 3.83329V13C20.6667 13.4583 20.4873 13.8508 20.1286 14.1775C19.7699 14.5041 19.3382 14.6672 18.8334 14.6666H15.1667V18.8333L11.5 17.1666L7.83337 18.8333V14.6666H4.16671C3.66254 14.6666 3.2311 14.5036 2.87237 14.1775C2.51365 13.8513 2.33399 13.4588 2.33337 13V3.83329C2.33337 3.37496 2.51304 2.98274 2.87237 2.65663C3.23171 2.33051 3.66315 2.16718 4.16671 2.16663ZM4.16671 11.3333H18.8334V8.83329H4.16671V11.3333Z"
+                      fill="#1C1A1A" />
+                  </svg>
+                </span>
+              </h3>
+              <h1 class="dark">₱ 600</h1>
+              <p class="dark fw-bold my-2 price-interval">/month</p>
+              <button class="cta bg-dark primary">Get Started!</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Price rate Section -->
+      <section class="bg-gray operating-hours">
+        <div class="py-4 px-3">
+          <h2 class="dark mb-2">OPERATING HOURS</h2>
+          <p class="dark f-16"><span><svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.42399 17.1073L3.89299 18.5763C4.58499 19.2683 4.93099 19.6143 5.36099 19.6143C5.79099 19.6143 6.13699 19.2683 6.82899 18.5763L7.19599 18.2093L7.56299 18.5763L8.29799 19.3103C8.98399 19.9963 9.32699 20.3393 9.72999 20.4473C9.99399 20.5173 10.272 20.5173 10.536 20.4473C10.939 20.3393 11.282 19.9963 11.968 19.3103C12.654 18.6243 12.998 18.2803 13.105 17.8773C13.176 17.6133 13.176 17.3353 13.105 17.0713C12.998 16.6683 12.655 16.3253 11.968 15.6393L10.868 14.5383L14.538 10.8683L15.639 11.9683C16.325 12.6543 16.669 12.9983 17.071 13.1053C17.335 13.1763 17.613 13.1763 17.877 13.1053C18.281 12.9983 18.624 12.6553 19.31 11.9683C19.996 11.2823 20.339 10.9393 20.447 10.5363C20.517 10.2723 20.517 9.9943 20.447 9.7303C20.339 9.3273 19.996 8.9843 19.31 8.2983L18.576 7.5633L18.205 7.2003L18.575 6.8303C19.268 6.1373 19.614 5.7913 19.614 5.3613C19.614 4.9313 19.268 4.5853 18.576 3.8933L17.107 2.4243C16.415 1.7323 16.069 1.3863 15.639 1.3863C15.209 1.3863 14.863 1.7323 14.171 2.4243L13.804 2.7923L12.702 1.6903C12.016 1.0043 11.673 0.661303 11.27 0.553303C11.006 0.482558 10.728 0.482558 10.464 0.553303C10.061 0.661303 9.71799 1.0043 9.03199 1.6903C8.34599 2.3763 8.00199 2.7203 7.89499 3.1233C7.82401 3.38728 7.82401 3.66532 7.89499 3.9293C8.00199 4.3323 8.34499 4.6753 9.03199 5.3613L10.132 6.4623L6.46199 10.1323L5.36099 9.0323C4.67499 8.3463 4.33099 8.0023 3.92899 7.8953C3.66498 7.82456 3.387 7.82456 3.12299 7.8953C2.71899 8.0023 2.37599 8.3453 1.68999 9.0323C1.00399 9.7183 0.660988 10.0613 0.552988 10.4643C0.482988 10.7283 0.482988 11.0063 0.552988 11.2703C0.660988 11.6733 1.00399 12.0163 1.68999 12.7023L2.79199 13.8043L2.42399 14.1713C1.73199 14.8633 1.38599 15.2093 1.38599 15.6393C1.38599 16.0693 1.73199 16.4153 2.42399 17.1073Z"
+                  fill="black" />
+              </svg>
+            </span> Monday - Saturday 7 AM–8 PM</p>
+          <p class="dark f-16"><span><svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.42399 17.1073L3.89299 18.5763C4.58499 19.2683 4.93099 19.6143 5.36099 19.6143C5.79099 19.6143 6.13699 19.2683 6.82899 18.5763L7.19599 18.2093L7.56299 18.5763L8.29799 19.3103C8.98399 19.9963 9.32699 20.3393 9.72999 20.4473C9.99399 20.5173 10.272 20.5173 10.536 20.4473C10.939 20.3393 11.282 19.9963 11.968 19.3103C12.654 18.6243 12.998 18.2803 13.105 17.8773C13.176 17.6133 13.176 17.3353 13.105 17.0713C12.998 16.6683 12.655 16.3253 11.968 15.6393L10.868 14.5383L14.538 10.8683L15.639 11.9683C16.325 12.6543 16.669 12.9983 17.071 13.1053C17.335 13.1763 17.613 13.1763 17.877 13.1053C18.281 12.9983 18.624 12.6553 19.31 11.9683C19.996 11.2823 20.339 10.9393 20.447 10.5363C20.517 10.2723 20.517 9.9943 20.447 9.7303C20.339 9.3273 19.996 8.9843 19.31 8.2983L18.576 7.5633L18.205 7.2003L18.575 6.8303C19.268 6.1373 19.614 5.7913 19.614 5.3613C19.614 4.9313 19.268 4.5853 18.576 3.8933L17.107 2.4243C16.415 1.7323 16.069 1.3863 15.639 1.3863C15.209 1.3863 14.863 1.7323 14.171 2.4243L13.804 2.7923L12.702 1.6903C12.016 1.0043 11.673 0.661303 11.27 0.553303C11.006 0.482558 10.728 0.482558 10.464 0.553303C10.061 0.661303 9.71799 1.0043 9.03199 1.6903C8.34599 2.3763 8.00199 2.7203 7.89499 3.1233C7.82401 3.38728 7.82401 3.66532 7.89499 3.9293C8.00199 4.3323 8.34499 4.6753 9.03199 5.3613L10.132 6.4623L6.46199 10.1323L5.36099 9.0323C4.67499 8.3463 4.33099 8.0023 3.92899 7.8953C3.66498 7.82456 3.387 7.82456 3.12299 7.8953C2.71899 8.0023 2.37599 8.3453 1.68999 9.0323C1.00399 9.7183 0.660988 10.0613 0.552988 10.4643C0.482988 10.7283 0.482988 11.0063 0.552988 11.2703C0.660988 11.6733 1.00399 12.0163 1.68999 12.7023L2.79199 13.8043L2.42399 14.1713C1.73199 14.8633 1.38599 15.2093 1.38599 15.6393C1.38599 16.0693 1.73199 16.4153 2.42399 17.1073Z"
+                  fill="black" />
+              </svg>
+            </span> Sunday 8 AM–12 PM</p>
+        </div>
+      </section>
+      <!-- Get In Touch Section -->
+      <section class="">
+        <h2 class="mb-3">GET IN<span class="primary">TOUCH</span></h2>
+        <p>Reach Out Anytime: Our Contact Details to Serve You Better</p>
+        <div class="row">
+          <div class="col-3 mt-3">
+            <div class="p-2">
+              <h3 class="primary p-1 text-center">
+                <span>
+                  <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M4.28669 7.79C5.72669 10.62 8.04669 12.93 10.8767 14.38L13.0767 12.18C13.3467 11.91 13.7467 11.82 14.0967 11.94C15.2167 12.31 16.4267 12.51 17.6667 12.51C18.2167 12.51 18.6667 12.96 18.6667 13.51V17C18.6667 17.55 18.2167 18 17.6667 18C8.27669 18 0.666687 10.39 0.666687 1C0.666687 0.45 1.11669 0 1.66669 0H5.16669C5.71669 0 6.16669 0.45 6.16669 1C6.16669 2.25 6.36669 3.45 6.73669 4.57C6.84669 4.92 6.76669 5.31 6.48669 5.59L4.28669 7.79Z"
                       fill="#FFCF25" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_10_325">
-                      <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </span>
-            </h3>
-            <h1 class="gray">₱ 60</h1>
-            <p class="fw-bold my-2 price-interval">/day</p>
-            <button class="cta">Get Started!</button>
+                  </svg>
+
+
+                </span>
+              </h3>
+              <p class="text-center sm">09XXXXXXXXX</p>
+            </div>
+          </div>
+          <div class="col-5 mt-3">
+            <div class="p-2">
+              <h3 class="primary p-1 text-center ml17">
+                <span><svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.00006 9.5C6.33702 9.5 5.70114 9.23661 5.23229 8.76777C4.76345 8.29893 4.50006 7.66304 4.50006 7C4.50006 6.33696 4.76345 5.70107 5.23229 5.23223C5.70114 4.76339 6.33702 4.5 7.00006 4.5C7.6631 4.5 8.29899 4.76339 8.76783 5.23223C9.23667 5.70107 9.50006 6.33696 9.50006 7C9.50006 7.3283 9.4354 7.65339 9.30976 7.95671C9.18412 8.26002 8.99997 8.53562 8.76783 8.76777C8.53568 8.99991 8.26008 9.18406 7.95677 9.3097C7.65346 9.43534 7.32837 9.5 7.00006 9.5ZM7.00006 0C5.14355 0 3.36307 0.737498 2.05031 2.05025C0.737559 3.36301 6.10352e-05 5.14348 6.10352e-05 7C6.10352e-05 12.25 7.00006 20 7.00006 20C7.00006 20 14.0001 12.25 14.0001 7C14.0001 5.14348 13.2626 3.36301 11.9498 2.05025C10.6371 0.737498 8.85658 0 7.00006 0Z"
+                      fill="#FFCF25" />
+                  </svg>
+
+                </span>
+              </h3>
+              <p class="text-center sm text-nowrap">Quezon Blvd, Bayambang,<br> 2423 Pangasinan</p>
+            </div>
+          </div>
+          <div class="col-3 mt-3">
+            <div class="p-2">
+              <h3 class="primary p-1 text-center">
+                <span><svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M18.3334 0H2.33337C1.23337 0 0.343374 0.9 0.343374 2L0.333374 14C0.333374 15.1 1.23337 16 2.33337 16H18.3334C19.4334 16 20.3334 15.1 20.3334 14V2C20.3334 0.9 19.4334 0 18.3334 0ZM18.3334 4L10.3334 9L2.33337 4V2L10.3334 7L18.3334 2V4Z"
+                      fill="#FFCF25" />
+                  </svg>
+
+                </span>
+              </h3>
+              <p class="text-center sm">TEST@GMAIL.COM</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <img src="assets/map.jpg" alt="site map" class="map mt-3 mb-3">
           </div>
         </div>
-        <div class="col-6 mt-3 mb-4">
-          <div class="bordered py-2 price-card bg-primary rounded">
-            <h3 class="dark p-3 text-center fw-bold">MEMBERSHIP
-              <span><svg width="22" height="22" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M4.16671 2.16663H18.8334C19.3375 2.16663 19.7693 2.32996 20.1286 2.65663C20.488 2.98329 20.6673 3.37551 20.6667 3.83329V13C20.6667 13.4583 20.4873 13.8508 20.1286 14.1775C19.7699 14.5041 19.3382 14.6672 18.8334 14.6666H15.1667V18.8333L11.5 17.1666L7.83337 18.8333V14.6666H4.16671C3.66254 14.6666 3.2311 14.5036 2.87237 14.1775C2.51365 13.8513 2.33399 13.4588 2.33337 13V3.83329C2.33337 3.37496 2.51304 2.98274 2.87237 2.65663C3.23171 2.33051 3.66315 2.16718 4.16671 2.16663ZM4.16671 11.3333H18.8334V8.83329H4.16671V11.3333Z"
-                    fill="#1C1A1A" />
-                </svg>
-              </span>
-            </h3>
-            <h1 class="dark">₱ 600</h1>
-            <p class="dark fw-bold my-2 price-interval">/month</p>
-            <button class="cta bg-dark primary">Get Started!</button>
+      </section>
+      <!-- End Get In Touch Section -->
+
+      <footer class="bg-dark">
+        <center>
+          <div class="flex-row justify-content-between">
+            <a href="#" class="footer-links">
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.54 10.05C20.54 4.53005 16.06 0.0500488 10.54 0.0500488C5.01998 0.0500488 0.539978 4.53005 0.539978 10.05C0.539978 14.89 3.97998 18.92 8.53998 19.85V13.05H6.53998V10.05H8.53998V7.55005C8.53998 5.62005 10.11 4.05005 12.04 4.05005H14.54V7.05005H12.54C11.99 7.05005 11.54 7.50005 11.54 8.05005V10.05H14.54V13.05H11.54V20C16.59 19.5 20.54 15.24 20.54 10.05Z"
+                  fill="#FFCF25" />
+              </svg>
+            </a>
+            <a href="#" class="footer-links">
+              <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.46 2C20.69 2.35 19.86 2.58 19 2.69C19.88 2.16 20.56 1.32 20.88 0.31C20.05 0.81 19.13 1.16 18.16 1.36C17.37 0.5 16.26 0 15 0C12.65 0 10.73 1.92 10.73 4.29C10.73 4.63 10.77 4.96 10.84 5.27C7.28004 5.09 4.11004 3.38 2.00004 0.79C1.63004 1.42 1.42004 2.16 1.42004 2.94C1.42004 4.43 2.17004 5.75 3.33004 6.5C2.62004 6.5 1.96004 6.3 1.38004 6V6.03C1.38004 8.11 2.86004 9.85 4.82004 10.24C4.19088 10.4129 3.53008 10.4369 2.89004 10.31C3.16165 11.1625 3.69358 11.9084 4.41106 12.4429C5.12854 12.9775 5.99549 13.2737 6.89004 13.29C5.37371 14.4905 3.49405 15.1394 1.56004 15.13C1.22004 15.13 0.880039 15.11 0.540039 15.07C2.44004 16.29 4.70004 17 7.12004 17C15 17 19.33 10.46 19.33 4.79C19.33 4.6 19.33 4.42 19.32 4.23C20.16 3.63 20.88 2.87 21.46 2Z"
+                  fill="#FFCF25" />
+              </svg>
+
+            </a>
+            <a href="#" class="footer-links">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16.46 0C16.9904 0 17.4991 0.210714 17.8742 0.585786C18.2492 0.960859 18.46 1.46957 18.46 2V16C18.46 16.5304 18.2492 17.0391 17.8742 17.4142C17.4991 17.7893 16.9904 18 16.46 18H2.45996C1.92953 18 1.42082 17.7893 1.04575 17.4142C0.670675 17.0391 0.459961 16.5304 0.459961 16V2C0.459961 1.46957 0.670675 0.960859 1.04575 0.585786C1.42082 0.210714 1.92953 0 2.45996 0H16.46ZM15.96 15.5V10.2C15.96 9.33539 15.6165 8.5062 15.0051 7.89483C14.3938 7.28346 13.5646 6.94 12.7 6.94C11.85 6.94 10.86 7.46 10.38 8.24V7.13H7.58996V15.5H10.38V10.57C10.38 9.8 11 9.17 11.77 9.17C12.1413 9.17 12.4974 9.3175 12.7599 9.58005C13.0225 9.8426 13.17 10.1987 13.17 10.57V15.5H15.96ZM4.33996 5.56C4.78552 5.56 5.21284 5.383 5.5279 5.06794C5.84296 4.75288 6.01996 4.32556 6.01996 3.88C6.01996 2.95 5.26996 2.19 4.33996 2.19C3.89175 2.19 3.46189 2.36805 3.14495 2.68499C2.82801 3.00193 2.64996 3.43178 2.64996 3.88C2.64996 4.81 3.40996 5.56 4.33996 5.56ZM5.72996 15.5V7.13H2.95996V15.5H5.72996Z"
+                  fill="#FFCF25" />
+              </svg>
+
+            </a>
+
+
           </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Price rate Section -->
-    <section class="bg-gray operating-hours">
-      <div class="py-4 px-3">
-        <h2 class="dark mb-2">OPERATING HOURS</h2>
-        <p class="dark f-16"><span><svg width="21" height="21" viewBox="0 0 21 21" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M2.42399 17.1073L3.89299 18.5763C4.58499 19.2683 4.93099 19.6143 5.36099 19.6143C5.79099 19.6143 6.13699 19.2683 6.82899 18.5763L7.19599 18.2093L7.56299 18.5763L8.29799 19.3103C8.98399 19.9963 9.32699 20.3393 9.72999 20.4473C9.99399 20.5173 10.272 20.5173 10.536 20.4473C10.939 20.3393 11.282 19.9963 11.968 19.3103C12.654 18.6243 12.998 18.2803 13.105 17.8773C13.176 17.6133 13.176 17.3353 13.105 17.0713C12.998 16.6683 12.655 16.3253 11.968 15.6393L10.868 14.5383L14.538 10.8683L15.639 11.9683C16.325 12.6543 16.669 12.9983 17.071 13.1053C17.335 13.1763 17.613 13.1763 17.877 13.1053C18.281 12.9983 18.624 12.6553 19.31 11.9683C19.996 11.2823 20.339 10.9393 20.447 10.5363C20.517 10.2723 20.517 9.9943 20.447 9.7303C20.339 9.3273 19.996 8.9843 19.31 8.2983L18.576 7.5633L18.205 7.2003L18.575 6.8303C19.268 6.1373 19.614 5.7913 19.614 5.3613C19.614 4.9313 19.268 4.5853 18.576 3.8933L17.107 2.4243C16.415 1.7323 16.069 1.3863 15.639 1.3863C15.209 1.3863 14.863 1.7323 14.171 2.4243L13.804 2.7923L12.702 1.6903C12.016 1.0043 11.673 0.661303 11.27 0.553303C11.006 0.482558 10.728 0.482558 10.464 0.553303C10.061 0.661303 9.71799 1.0043 9.03199 1.6903C8.34599 2.3763 8.00199 2.7203 7.89499 3.1233C7.82401 3.38728 7.82401 3.66532 7.89499 3.9293C8.00199 4.3323 8.34499 4.6753 9.03199 5.3613L10.132 6.4623L6.46199 10.1323L5.36099 9.0323C4.67499 8.3463 4.33099 8.0023 3.92899 7.8953C3.66498 7.82456 3.387 7.82456 3.12299 7.8953C2.71899 8.0023 2.37599 8.3453 1.68999 9.0323C1.00399 9.7183 0.660988 10.0613 0.552988 10.4643C0.482988 10.7283 0.482988 11.0063 0.552988 11.2703C0.660988 11.6733 1.00399 12.0163 1.68999 12.7023L2.79199 13.8043L2.42399 14.1713C1.73199 14.8633 1.38599 15.2093 1.38599 15.6393C1.38599 16.0693 1.73199 16.4153 2.42399 17.1073Z"
-                fill="black" />
-            </svg>
-          </span> Monday - Saturday 7 AM–8 PM</p>
-        <p class="dark f-16"><span><svg width="21" height="21" viewBox="0 0 21 21" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M2.42399 17.1073L3.89299 18.5763C4.58499 19.2683 4.93099 19.6143 5.36099 19.6143C5.79099 19.6143 6.13699 19.2683 6.82899 18.5763L7.19599 18.2093L7.56299 18.5763L8.29799 19.3103C8.98399 19.9963 9.32699 20.3393 9.72999 20.4473C9.99399 20.5173 10.272 20.5173 10.536 20.4473C10.939 20.3393 11.282 19.9963 11.968 19.3103C12.654 18.6243 12.998 18.2803 13.105 17.8773C13.176 17.6133 13.176 17.3353 13.105 17.0713C12.998 16.6683 12.655 16.3253 11.968 15.6393L10.868 14.5383L14.538 10.8683L15.639 11.9683C16.325 12.6543 16.669 12.9983 17.071 13.1053C17.335 13.1763 17.613 13.1763 17.877 13.1053C18.281 12.9983 18.624 12.6553 19.31 11.9683C19.996 11.2823 20.339 10.9393 20.447 10.5363C20.517 10.2723 20.517 9.9943 20.447 9.7303C20.339 9.3273 19.996 8.9843 19.31 8.2983L18.576 7.5633L18.205 7.2003L18.575 6.8303C19.268 6.1373 19.614 5.7913 19.614 5.3613C19.614 4.9313 19.268 4.5853 18.576 3.8933L17.107 2.4243C16.415 1.7323 16.069 1.3863 15.639 1.3863C15.209 1.3863 14.863 1.7323 14.171 2.4243L13.804 2.7923L12.702 1.6903C12.016 1.0043 11.673 0.661303 11.27 0.553303C11.006 0.482558 10.728 0.482558 10.464 0.553303C10.061 0.661303 9.71799 1.0043 9.03199 1.6903C8.34599 2.3763 8.00199 2.7203 7.89499 3.1233C7.82401 3.38728 7.82401 3.66532 7.89499 3.9293C8.00199 4.3323 8.34499 4.6753 9.03199 5.3613L10.132 6.4623L6.46199 10.1323L5.36099 9.0323C4.67499 8.3463 4.33099 8.0023 3.92899 7.8953C3.66498 7.82456 3.387 7.82456 3.12299 7.8953C2.71899 8.0023 2.37599 8.3453 1.68999 9.0323C1.00399 9.7183 0.660988 10.0613 0.552988 10.4643C0.482988 10.7283 0.482988 11.0063 0.552988 11.2703C0.660988 11.6733 1.00399 12.0163 1.68999 12.7023L2.79199 13.8043L2.42399 14.1713C1.73199 14.8633 1.38599 15.2093 1.38599 15.6393C1.38599 16.0693 1.73199 16.4153 2.42399 17.1073Z"
-                fill="black" />
-            </svg>
-          </span> Sunday 8 AM–12 PM</p>
-      </div>
-    </section>
-    <!-- Get In Touch Section -->
-    <section class="">
-      <h2 class="mb-3">GET IN<span class="primary">TOUCH</span></h2>
-      <p>Reach Out Anytime: Our Contact Details to Serve You Better</p>
-      <div class="row">
-        <div class="col-3 mt-3">
-          <div class="p-2">
-            <h3 class="primary p-1 text-center">
-              <span>
-                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M4.28669 7.79C5.72669 10.62 8.04669 12.93 10.8767 14.38L13.0767 12.18C13.3467 11.91 13.7467 11.82 14.0967 11.94C15.2167 12.31 16.4267 12.51 17.6667 12.51C18.2167 12.51 18.6667 12.96 18.6667 13.51V17C18.6667 17.55 18.2167 18 17.6667 18C8.27669 18 0.666687 10.39 0.666687 1C0.666687 0.45 1.11669 0 1.66669 0H5.16669C5.71669 0 6.16669 0.45 6.16669 1C6.16669 2.25 6.36669 3.45 6.73669 4.57C6.84669 4.92 6.76669 5.31 6.48669 5.59L4.28669 7.79Z"
-                    fill="#FFCF25" />
-                </svg>
-
-
-              </span>
-            </h3>
-            <p class="text-center sm">09XXXXXXXXX</p>
-          </div>
-        </div>
-        <div class="col-5 mt-3">
-          <div class="p-2">
-            <h3 class="primary p-1 text-center ml17">
-              <span><svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.00006 9.5C6.33702 9.5 5.70114 9.23661 5.23229 8.76777C4.76345 8.29893 4.50006 7.66304 4.50006 7C4.50006 6.33696 4.76345 5.70107 5.23229 5.23223C5.70114 4.76339 6.33702 4.5 7.00006 4.5C7.6631 4.5 8.29899 4.76339 8.76783 5.23223C9.23667 5.70107 9.50006 6.33696 9.50006 7C9.50006 7.3283 9.4354 7.65339 9.30976 7.95671C9.18412 8.26002 8.99997 8.53562 8.76783 8.76777C8.53568 8.99991 8.26008 9.18406 7.95677 9.3097C7.65346 9.43534 7.32837 9.5 7.00006 9.5ZM7.00006 0C5.14355 0 3.36307 0.737498 2.05031 2.05025C0.737559 3.36301 6.10352e-05 5.14348 6.10352e-05 7C6.10352e-05 12.25 7.00006 20 7.00006 20C7.00006 20 14.0001 12.25 14.0001 7C14.0001 5.14348 13.2626 3.36301 11.9498 2.05025C10.6371 0.737498 8.85658 0 7.00006 0Z"
-                    fill="#FFCF25" />
-                </svg>
-
-              </span>
-            </h3>
-            <p class="text-center sm text-nowrap">Quezon Blvd, Bayambang,<br> 2423 Pangasinan</p>
-          </div>
-        </div>
-        <div class="col-3 mt-3">
-          <div class="p-2">
-            <h3 class="primary p-1 text-center">
-              <span><svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M18.3334 0H2.33337C1.23337 0 0.343374 0.9 0.343374 2L0.333374 14C0.333374 15.1 1.23337 16 2.33337 16H18.3334C19.4334 16 20.3334 15.1 20.3334 14V2C20.3334 0.9 19.4334 0 18.3334 0ZM18.3334 4L10.3334 9L2.33337 4V2L10.3334 7L18.3334 2V4Z"
-                    fill="#FFCF25" />
-                </svg>
-
-              </span>
-            </h3>
-            <p class="text-center sm">TEST@GMAIL.COM</p>
-          </div>
-        </div>
-
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <img src="assets/map.jpg" alt="site map" class="map mt-3 mb-3">
-        </div>
-      </div>
-    </section>
-    <!-- End Get In Touch Section -->
-
-    <footer class="bg-dark">
-      <center>
-        <div class="flex-row justify-content-between">
-          <a href="#" class="footer-links">
-            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M20.54 10.05C20.54 4.53005 16.06 0.0500488 10.54 0.0500488C5.01998 0.0500488 0.539978 4.53005 0.539978 10.05C0.539978 14.89 3.97998 18.92 8.53998 19.85V13.05H6.53998V10.05H8.53998V7.55005C8.53998 5.62005 10.11 4.05005 12.04 4.05005H14.54V7.05005H12.54C11.99 7.05005 11.54 7.50005 11.54 8.05005V10.05H14.54V13.05H11.54V20C16.59 19.5 20.54 15.24 20.54 10.05Z"
-                fill="#FFCF25" />
-            </svg>
-          </a>
-          <a href="#" class="footer-links">
-            <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M21.46 2C20.69 2.35 19.86 2.58 19 2.69C19.88 2.16 20.56 1.32 20.88 0.31C20.05 0.81 19.13 1.16 18.16 1.36C17.37 0.5 16.26 0 15 0C12.65 0 10.73 1.92 10.73 4.29C10.73 4.63 10.77 4.96 10.84 5.27C7.28004 5.09 4.11004 3.38 2.00004 0.79C1.63004 1.42 1.42004 2.16 1.42004 2.94C1.42004 4.43 2.17004 5.75 3.33004 6.5C2.62004 6.5 1.96004 6.3 1.38004 6V6.03C1.38004 8.11 2.86004 9.85 4.82004 10.24C4.19088 10.4129 3.53008 10.4369 2.89004 10.31C3.16165 11.1625 3.69358 11.9084 4.41106 12.4429C5.12854 12.9775 5.99549 13.2737 6.89004 13.29C5.37371 14.4905 3.49405 15.1394 1.56004 15.13C1.22004 15.13 0.880039 15.11 0.540039 15.07C2.44004 16.29 4.70004 17 7.12004 17C15 17 19.33 10.46 19.33 4.79C19.33 4.6 19.33 4.42 19.32 4.23C20.16 3.63 20.88 2.87 21.46 2Z"
-                fill="#FFCF25" />
-            </svg>
-
-          </a>
-          <a href="#" class="footer-links">
-            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M16.46 0C16.9904 0 17.4991 0.210714 17.8742 0.585786C18.2492 0.960859 18.46 1.46957 18.46 2V16C18.46 16.5304 18.2492 17.0391 17.8742 17.4142C17.4991 17.7893 16.9904 18 16.46 18H2.45996C1.92953 18 1.42082 17.7893 1.04575 17.4142C0.670675 17.0391 0.459961 16.5304 0.459961 16V2C0.459961 1.46957 0.670675 0.960859 1.04575 0.585786C1.42082 0.210714 1.92953 0 2.45996 0H16.46ZM15.96 15.5V10.2C15.96 9.33539 15.6165 8.5062 15.0051 7.89483C14.3938 7.28346 13.5646 6.94 12.7 6.94C11.85 6.94 10.86 7.46 10.38 8.24V7.13H7.58996V15.5H10.38V10.57C10.38 9.8 11 9.17 11.77 9.17C12.1413 9.17 12.4974 9.3175 12.7599 9.58005C13.0225 9.8426 13.17 10.1987 13.17 10.57V15.5H15.96ZM4.33996 5.56C4.78552 5.56 5.21284 5.383 5.5279 5.06794C5.84296 4.75288 6.01996 4.32556 6.01996 3.88C6.01996 2.95 5.26996 2.19 4.33996 2.19C3.89175 2.19 3.46189 2.36805 3.14495 2.68499C2.82801 3.00193 2.64996 3.43178 2.64996 3.88C2.64996 4.81 3.40996 5.56 4.33996 5.56ZM5.72996 15.5V7.13H2.95996V15.5H5.72996Z"
-                fill="#FFCF25" />
-            </svg>
-
-          </a>
-
-
-        </div>
-      </center>
-      <p class="gray text-center pb-3">© Hardcore Gym Fitness. All Rights Reserved.</p>
-    </footer>
+        </center>
+        <p class="gray text-center pb-3">© Hardcore Gym Fitness. All Rights Reserved.</p>
+      </footer>
   </body>
 
 </htm

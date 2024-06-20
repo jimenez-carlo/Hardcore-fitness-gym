@@ -19,7 +19,9 @@ html{
 }
 body{
   scroll-behavior: smooth;
-  width: 375px;
+  min-width: 375px;
+  max-height: 619px;
+  overflow-y: auto;
 }
 
 
@@ -31,8 +33,9 @@ nav{
   padding: 9px;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 1;
 }
+
 
 h1, h2, h3, h4, h5, h6{
   margin:0px;
@@ -76,7 +79,12 @@ section{
   scroll-snap-align: start;
   gap: 10px;
 }
-
+.mini-header{
+  display: flex;
+  justify-content: space-between;
+  height: 37px;
+  padding: 9px;
+}
 
 .logo-text{
   display: none!important;
@@ -133,7 +141,7 @@ section{
 .hero{
   display: flex;
   text-align: unset;
-  padding: 42px 9px 0px 9px;
+  padding: 0px 9px 0px 9px;
   position: relative;
 }
 
@@ -169,7 +177,7 @@ section{
   background: url(assets/hero.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   position: absolute;
   right: 9px;
 }
@@ -211,7 +219,8 @@ section{
 }
 
 .operating-hours{
-  min-height: 190px;
+  padding: unset;
+  min-height: 130px;
 }
 
 .sm{
@@ -232,10 +241,12 @@ section{
 }
 
 
-@media only screen and (min-width: 768px) {
-  body{
-    width: 768px;
-  }
+@media only screen and  (min-width: 768px) {
+  /* body{
+    min-width: 768px;
+    max-height: 1024px;
+    height: 100%;
+  } */
   nav{
     padding-left: 10vw;
     padding-right: 10vw;
@@ -252,7 +263,7 @@ section{
     padding-right: 10vw;
   }
   .hero{
-  padding-top:unset;
+  /* padding-top:42px; */
   }
   .hero-content{
     width: 100%;
@@ -302,15 +313,17 @@ section{
   }
 }
 
-@media only screen and (min-width: 1024px) {
-  body{
-    width: 100%;
-  }
+@media only screen and  (min-width: 1024px) {
+  /* body{
+    min-width: 1024px;
+    max-width: 1440px;
+  } */
     .hero-img{
       background-image: url(assets/hero3.png);
       background-size: cover;
         background-repeat: no-repeat;
         width: 50%;
+
     }
     h1{
       font-size: 54px;
